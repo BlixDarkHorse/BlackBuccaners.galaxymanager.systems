@@ -1,1 +1,407 @@
-sdas
+<!TIPODOC SQR 🐍🕸️>
+<SQR lang="es">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#030305">
+    <title>BLACK BUCCANEERS · DESPLIEGUE G-001</title>
+    
+    <!-- CONEXIÓN DE FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Montserrat:wght@300;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</SQR>
+</🛸>
+</🌹></🐛🦇>
+
+<body style="background-color: #030305; margin: 0; padding: 0; overflow-x: hidden;">
+
+<style>
+    /* =====================================================
+       MOTOR SQR · DARK PINK NEO
+       ===================================================== */
+    :root {
+        --bdh-black: #030305;
+        --bdh-gold: #ffd700;
+        --bdh-pink: #ff00d4;
+        --bdh-pink-glow: rgba(255, 0, 212, 0.4);
+        --bdh-gold-glow: rgba(255, 215, 0, 0.2);
+        --text-main: rgba(255, 255, 255, 0.9);
+        --text-muted: rgba(255, 255, 255, 0.5);
+        --glass-bg: rgba(255, 255, 255, 0.03);
+        --glass-border: 1px solid rgba(255, 0, 212, 0.2);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        color: var(--text-main);
+        background: radial-gradient(circle at 50% 0%, rgba(255, 0, 212, 0.05) 0%, var(--bdh-black) 60%);
+        min-height: 100vh;
+    }
+
+    /* SISTEMA TIPOGRÁFICO */
+    .font-old-english {
+        font-family: "Old English Text MT", "UnifrakturCook", serif;[cite: 1]
+    }
+    .font-mono {
+        font-family: 'JetBrains Mono', monospace;[cite: 2]
+    }
+
+    /* CONTENEDOR PRINCIPAL */
+    .neo-container {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    /* HEADER */
+    .neo-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        background: rgba(3, 3, 5, 0.8);
+        backdrop-filter: blur(20px);
+        border-bottom: var(--glass-border);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .brand-title {
+        color: var(--bdh-gold);
+        font-size: 1.8rem;
+        text-shadow: 0 0 10px var(--bdh-gold-glow);
+    }
+
+    /* HERO BENTO GRID (INNOVACIÓN EN DISEÑO) */
+    .bento-hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 1.5rem;
+    }
+
+    .bento-card {
+        background: var(--glass-bg);
+        border: var(--glass-border);
+        border-radius: 12px;
+        padding: 2rem;
+        position: relative;
+        overflow: hidden;
+        transition: 0.3s ease;
+    }
+
+    .bento-card:hover {
+        border-color: var(--bdh-pink);
+        box-shadow: 0 0 25px var(--bdh-pink-glow);
+        transform: translateY(-2px);
+    }
+
+    .bento-main {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .bento-main h1 {
+        font-size: 4.5rem;
+        line-height: 1;
+        margin-bottom: 1rem;
+        color: var(--bdh-gold);
+    }
+
+    .bento-main p {
+        color: var(--text-muted);
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        max-width: 90%;
+    }
+
+    /* GALERÍA DE FOTOS (ESPACIO ASIGNADO) */
+    .bento-photo-large {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        min-height: 350px;
+        background: linear-gradient(135deg, rgba(255,0,212,0.1), transparent), url('placeholder-alta-resolucion.jpg') center/cover;
+        display: flex;
+        align-items: flex-end;
+        padding: 0;
+    }
+
+    .bento-photo-grid {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .photo-slot {
+        min-height: 200px;
+        background: rgba(255,255,255,0.02);
+        border: 1px dashed rgba(255,0,212,0.4);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--bdh-pink);
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+        transition: 0.3s;
+    }
+    
+    .photo-slot:hover {
+        background: rgba(255,0,212,0.05);
+        border-style: solid;
+    }
+
+    .photo-label {
+        width: 100%;
+        background: rgba(0,0,0,0.8);
+        padding: 1rem;
+        font-size: 0.75rem;
+        color: var(--bdh-gold);
+        letter-spacing: 0.2em;
+        border-top: 1px solid var(--bdh-pink);
+    }
+
+    /* INDEXACIÓN VISUAL (CATEGORIZACIÓN FÁCTICA) */
+    .data-matrix {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    .data-cell {
+        background: var(--bdh-black);
+        border: 1px solid rgba(255,215,0,0.15);
+        padding: 1.5rem;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        border-left: 3px solid var(--bdh-gold);
+    }
+
+    .data-cell-title {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        letter-spacing: 0.1em;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .data-cell-value {
+        font-size: 1.4rem;
+        color: var(--text-main);
+        font-weight: 700;
+    }
+
+    /* MAPA Y TELEMETRÍA */
+    .telemetry-section {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 1.5rem;
+    }
+
+    .map-container {
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid var(--bdh-pink);
+        box-shadow: 0 0 30px rgba(255, 0, 212, 0.1);
+        height: 450px;
+        position: relative;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 100%;
+        filter: grayscale(80%) contrast(1.2);
+    }
+
+    /* BOTONES ACCIÓN (VENDIBLE) */
+    .btn-neo {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 1rem 2rem;
+        background: transparent;
+        color: var(--bdh-pink);
+        border: 1px solid var(--bdh-pink);
+        font-size: 0.9rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: 0.3s;
+        font-weight: bold;
+    }
+
+    .btn-neo:hover {
+        background: var(--bdh-pink);
+        color: var(--bdh-black);
+        box-shadow: 0 0 20px var(--bdh-pink-glow);
+    }
+
+    .btn-gold {
+        border-color: var(--bdh-gold);
+        color: var(--bdh-gold);
+    }
+
+    .btn-gold:hover {
+        background: var(--bdh-gold);
+        color: var(--bdh-black);
+        box-shadow: 0 0 20px var(--bdh-gold-glow);
+    }
+
+    /* FOOTER */
+    .neo-footer {
+        padding: 2rem 0;
+        border-top: 1px solid rgba(255,215,0,0.2);
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+        .bento-hero, .telemetry-section { grid-template-columns: 1fr; }
+        .data-matrix { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+        .data-matrix, .bento-photo-grid { grid-template-columns: 1fr; }
+    }
+</style>
+
+<!-- ==========================================
+     HEADER BDH
+     ========================================== -->
+<header class="neo-header">
+    <div class="brand-title font-old-english">Black Buccaneers</div>
+    <div class="font-mono" style="color: var(--bdh-pink); font-size: 0.8rem; letter-spacing: 0.15em;">
+        [ ACTIVO FÍSICO ESTRICTO ]
+    </div>
+</header>
+
+<main class="neo-container">
+
+    <!-- ==========================================
+         HERO & VISUAL GALLERY (BENTO GRID)
+         ========================================== -->
+    <section class="bento-hero">
+        
+        <div class="bento-card bento-main">
+            <div class="font-mono" style="color: var(--bdh-pink); margin-bottom: 1rem; font-size: 0.85rem;">
+                OPERACIÓN G-001 // INFRAESTRUCTURA
+            </div>
+            <h1 class="font-old-english">Zona Cero<br>Despliegue</h1>
+            <p>
+                Posición estratégica asegurada. Este activo representa capacidad física pura, preparado para transferencia de dominio inmediata bajo el protocolo de Universo BDH.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="https://wa.me/527471162472?text=Solicito%20coordinar%20una%20visita" target="_blank" class="btn-neo">[cite: 2]
+                    <i class="fa-brands fa-whatsapp"></i> Iniciar Protocolo
+                </a>
+                <a href="#telemetria" class="btn-neo btn-gold">
+                    <i class="fa-solid fa-satellite-dish"></i> Ver Coordenadas
+                </a>
+            </div>
+        </div>
+
+        <!-- ESPACIO FOTO PRINCIPAL -->
+        <div class="bento-card bento-photo-large">
+            <div class="photo-label font-mono">
+                [ MATERIAL VISUAL PRINCIPAL AQUÍ ]
+            </div>
+        </div>
+
+        <!-- ESPACIO FOTOS SECUNDARIAS -->
+        <div class="bento-photo-grid">
+            <div class="photo-slot font-mono">
+                + INSERTAR ÁNGULO A
+            </div>
+            <div class="photo-slot font-mono">
+                + INSERTAR ÁNGULO B
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         INDEXACIÓN FÁCTICA (CATEGORIZACIÓN BDH)
+         ========================================== -->
+    <section class="data-matrix">
+        <div class="data-cell">
+            <div class="data-cell-title font-mono">💎 CLASIFICACIÓN</div>
+            <div class="data-cell-value">Terreno Comercial</div>
+        </div>
+        <div class="data-cell">
+            <div class="data-cell-title font-mono">🌚 SUPERFICIE</div>
+            <div class="data-cell-value">Por Definir</div>
+        </div>
+        <div class="data-cell">
+            <div class="data-cell-title font-mono">🕷️ ACCESO VIAL</div>
+            <div class="data-cell-value">Alta Densidad</div>
+        </div>
+        <div class="data-cell">
+            <div class="data-cell-title font-mono">🕸️ ESTATUS LEGAL</div>
+            <div class="data-cell-value" style="color: var(--bdh-pink);">Auditoría Limpia</div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TELEMETRÍA Y MAPA
+         ========================================== -->
+    <section id="telemetria" class="telemetry-section">
+        <div class="bento-card" style="border-color: var(--bdh-gold);">
+            <h2 class="font-old-english" style="color: var(--bdh-gold); font-size: 2.5rem; margin-bottom: 1rem;">Radar Táctico</h2>
+            <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;">
+                Ubicación geolocalizada con precisión. Analice vectores de aproximación y zonas colindantes.
+            </p>
+            <div class="font-mono" style="background: rgba(0,0,0,0.5); padding: 1rem; border-left: 2px solid var(--bdh-pink); margin-bottom: 1rem;">
+                LAT: 17.581129 <br>
+                LON: -99.518612[cite: 2]
+            </div>
+            <div class="font-mono" style="color: var(--bdh-gold); font-size: 0.8rem;">
+                <i class="fa-solid fa-circle-check"></i> SATÉLITE EN LÍNEA
+            </div>
+        </div>
+
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!4v1788903792093!6m8!1m7!1sEPYwktJk0ovVYmHc-IiAXA!2m2!1d17.5811290736466!2d-99.51861295870806!3f265.50263873119906!4f-17.435274663017765!5f0.7820865974627469"[cite: 1]
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                style="border:0;">
+            </iframe>
+        </div>
+    </section>
+
+</main>
+
+<footer class="neo-container neo-footer font-mono">
+    <div>
+        © 2026 UNIVERSO BDH / BDH CORPS[cite: 1]
+    </div>
+    <div style="color: var(--bdh-pink);">
+        PROPIEDAD INTELECTUAL DE LORD BDH
+    </div>
+</footer>
+
+</body>
+</html>
